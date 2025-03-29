@@ -1,0 +1,20 @@
+{
+  "name": "math-learning-platform",
+  "version": "1.0.0",
+  "description": "An improved version of IXL for K-12 math learning aligned with US standards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunnyM-Student/math-learning-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunnyM-Student/math-learning-platform/issues"
+  },
+  "homepage": "https://github.com/SunnyM-Student/math-learning-platform#readme"
+}
