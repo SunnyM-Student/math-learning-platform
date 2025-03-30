@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { supabase } from './lib/supabaseClient';
+import PracticeCompleted from './pages/PracticeCompleted';
+// Make sure this line is at the top of AppRouter.js with your other imports
+import StudentProgress from './pages/StudentProgress';
+import RewardsDashboard from './pages/RewardsDashboard';
 
 // Import pages
 import Login from './pages/Login';
@@ -60,6 +64,14 @@ const AppRouter = () => {
           path="/register" 
           element={user ? <Navigate to="/dashboard" replace /> : <Register />} 
         />
+        <Route
+  path="/practice/completed"
+  element={user ? <PracticeCompleted /> : <Navigate to="/login" replace />}
+/>
+<Route
+  path="/progress"
+  element={user ? <StudentProgress /> : <Navigate to="/login" replace />}
+/>
         
         {/* Protected routes - require authentication */}
         <Route 
@@ -74,6 +86,10 @@ const AppRouter = () => {
           path="/practice/:topicId" 
           element={user ? <PracticeProblem /> : <Navigate to="/login" replace />} 
         />
+        <Route
+  path="/rewards"
+  element={user ? <RewardsDashboard /> : <Navigate to="/login" replace />}
+/>
         
         {/* Default redirect */}
         <Route 

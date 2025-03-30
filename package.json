@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/SunnyM-Student/math-learning-platform/issues"
   },
-  "homepage": "https://github.com/SunnyM-Student/math-learning-platform#readme"
+  "homepage": "https://github.com/SunnyM-Student/math-learning-platform#readme",
+  "dependencies": {
+    "react-confetti": "^6.4.0",
+    "react-use": "^17.6.0"
+  }
 }

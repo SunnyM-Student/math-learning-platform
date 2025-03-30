@@ -96,6 +96,44 @@ const Dashboard = () => {
               : 'You are a teacher.'}
           </p>
         </div>
+
+        {/* Rewards and Achievements Card */}
+        {profile?.role === 'student' && (
+          <div className="card mb-6">
+            <h2 className="text-xl font-bold mb-4">Rewards & Achievements</h2>
+            <div className="flex items-center mb-4">
+              <div className="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-3">
+                <span>XP</span>
+              </div>
+              <div>
+                <p className="mb-1">Earn XP by solving problems and maintaining your daily streak!</p>
+                <p className="text-neutral-medium text-sm">View your achievements and track your progress</p>
+              </div>
+            </div>
+            <button
+              onClick={() => navigate('/rewards')}
+              className="btn btn-primary w-full"
+            >
+              View Rewards & Achievements
+            </button>
+          </div>
+        )}
+
+        {/* Progress Dashboard Link */}
+        {profile?.role === 'student' && (
+          <div className="card mb-6">
+            <h2 className="text-xl font-bold mb-4">Track Your Progress</h2>
+            <p className="mb-4">
+              View detailed statistics about your learning journey, track your mastery of topics, and see your recent activity.
+            </p>
+            <button
+              onClick={() => navigate('/progress')}
+              className="btn btn-primary"
+            >
+              View My Progress
+            </button>
+          </div>
+        )}
         
         {profile?.role === 'student' && (
           <div>
